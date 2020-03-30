@@ -8,6 +8,7 @@
 # --------------------------------------------------------
 
 """Train a Fast R-CNN network on a region of interest database."""
+
 import findcaffe
 import caffe
 import argparse
@@ -15,6 +16,7 @@ import pprint
 import numpy as np
 import sys
 import os
+
 sys.setrecursionlimit(1500)
 
 
@@ -77,6 +79,7 @@ if __name__ == '__main__':
     caffe.set_mode_gpu()
     if args.gpu_id is not None:
         caffe.set_device(args.gpu_id)
+
 
     sw = SolverWrapper(args.solver,
                        pretrained_model=args.pretrained_model, snapshot_model=args.snapshot_model)

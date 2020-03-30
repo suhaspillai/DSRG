@@ -23,7 +23,7 @@ If you find DSRG useful in your research, please consider citing:
         pages={7014--7023},
         year={2018}
     }
-    
+
 ## Installing dependencies
 
 * Python packages:
@@ -35,11 +35,12 @@ If you find DSRG useful in your research, please consider citing:
 * Fully connected CRF wrapper (requires the **Eigen3** package).
 ```bash
       $ pip install CRF/
+      python setup.py build_ext -i
 ```
 
 ## Training the DSRG model
 
-* Go into the training directory: 
+* Go into the training directory:
 
 ```bash
       $ cd training
@@ -62,7 +63,7 @@ If you find DSRG useful in your research, please consider citing:
       $ bash run.sh
 ```
    The trained model will be created in `models`
-   
-   
+
+
 ## Acknowledgment
 This code is heavily borrowed from [SEC](https://github.com/kolesman/SEC).

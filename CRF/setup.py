@@ -27,7 +27,8 @@ setup(
         include_dirs=[
             numpy.get_include(),
             "include",
-            "/usr/local/include/eigen3",
+            "/workspace/hzl/eigen-3.3.7"  
+            #"/usr/local/include/eigen3",
         ],
         language="c++",
         )

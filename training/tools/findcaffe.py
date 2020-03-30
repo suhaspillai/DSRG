@@ -18,7 +18,8 @@ def add_path(path):
 this_dir = osp.dirname(__file__)
 
 # Add caffe to PYTHONPATH
-caffe_path = osp.join('/workspace', 'hzl', 'deeplab-v2', 'python')
+#caffe_path = osp.join('/workspace', 'hzl', 'deeplab-v2', 'python')
+caffe_path = osp.join('/opt', 'caffe', 'python')
 #caffe_path = /workspace/hzl/deeplab-v2/python/
 print(caffe_path)
 add_path(caffe_path)
@@ -26,4 +27,3 @@ add_path(caffe_path)
 # Add lib to PYTHONPATH
 lib_path = osp.join(this_dir, '..', '..', 'pylayers')
 add_path(lib_path)
-

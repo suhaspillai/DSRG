@@ -9,10 +9,10 @@ base_lr: 5e-4
 
 display: 10
 average_loss: 10
-max_iter: 8000
+max_iter: 200
 momentum: 0.9
 weight_decay: 0.0005
 
-snapshot: 8000
+snapshot: 200
 snapshot_prefix: "models/model-s"
 solver_mode: GPU

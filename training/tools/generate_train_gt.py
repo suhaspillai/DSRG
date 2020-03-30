@@ -94,7 +94,7 @@ def predict_mask(image_file, smooth, labels):
 
     if smooth:
         probs = krahenbuhl2013.CRF(im, np.log(probs), scale_factor=1.0)
-        
+
     labels = labels.tolist()
     labels.insert(0, 0)
     probs_selected = probs[:, :, labels]
@@ -115,7 +115,8 @@ if __name__ == "__main__":
     net = caffe.Net('deploy.prototxt', model, caffe.TEST)
 
     image_ids = [i.strip().split() for i in open(image_list) if not i.strip() == '']
-    data_dir = '/workspace/hzl/wsis/data/voc12/JPEGImages'
+    #data_dir = '/workspace/hzl/wsis/data/voc12/JPEGImages'
+    data_dir = '/DSRG/data/VOCdevkit/VOC2012/JPEGImages'
     for index, img_id in enumerate(image_ids):
         print index, img_id
         image_file = osp.join(data_dir, osp.splitext(img_id[0])[0]+'.jpg')

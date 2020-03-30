@@ -14,7 +14,7 @@ layer {
   image_data_param {
     root_folder: "/workspace/hzl/data/VOCdevkit/VOC2012/JPEGImages/"
     source: "list/input_list.txt"
-    batch_size: 20
+    batch_size: 5
     new_height: 321
     new_width: 321
     shuffle: true
@@ -44,7 +44,7 @@ layer {
   name: "conv1_1"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 64
     pad: 1
@@ -65,7 +65,7 @@ layer {
   name: "conv1_2"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 64
     pad: 1
@@ -99,7 +99,7 @@ layer {
   name: "conv2_1"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 128
     pad: 1
@@ -120,7 +120,7 @@ layer {
   name: "conv2_2"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 128
     pad: 1
@@ -154,7 +154,7 @@ layer {
   name: "conv3_1"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 256
     pad: 1
@@ -175,7 +175,7 @@ layer {
   name: "conv3_2"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 256
     pad: 1
@@ -196,7 +196,7 @@ layer {
   name: "conv3_3"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 } 
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 256
     pad: 1
@@ -227,10 +227,10 @@ layer {
 layer {
   bottom: "pool3"
   top: "conv4_1"
-  name: "conv4_1" 
+  name: "conv4_1"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 512
     pad: 1
@@ -251,7 +251,7 @@ layer {
   name: "conv4_2"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 512
     pad: 1
@@ -272,7 +272,7 @@ layer {
   name: "conv4_3"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 512
     pad: 1
@@ -306,7 +306,7 @@ layer {
   name: "conv5_1"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 512
     pad: 2
@@ -328,7 +328,7 @@ layer {
   name: "conv5_2"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 512
     pad: 2
@@ -350,7 +350,7 @@ layer {
   name: "conv5_3"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 512
     pad: 2
@@ -399,7 +399,7 @@ layer {
   name: "fc6_1"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 1024
     pad: 6
@@ -431,7 +431,7 @@ layer {
   name: "fc7_1"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 1024
     kernel_size: 1
@@ -461,7 +461,7 @@ layer {
   name: "fc8-SEC_1"
   type: "Convolution"
   param { lr_mult: 10 decay_mult: 1 }
-  param { lr_mult: 20 decay_mult: 0 }  
+  param { lr_mult: 20 decay_mult: 0 }
   convolution_param {
     num_output: 21
     kernel_size: 1
@@ -483,7 +483,7 @@ layer {
   name: "fc6_2"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 1024
     pad: 12
@@ -515,7 +515,7 @@ layer {
   name: "fc7_2"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 1024
     kernel_size: 1
@@ -545,7 +545,7 @@ layer {
   name: "fc8-SEC_2"
   type: "Convolution"
   param { lr_mult: 10 decay_mult: 1 }
-  param { lr_mult: 20 decay_mult: 0 }  
+  param { lr_mult: 20 decay_mult: 0 }
   convolution_param {
     num_output: 21
     kernel_size: 1
@@ -567,7 +567,7 @@ layer {
   name: "fc6_3"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 1024
     pad: 18
@@ -600,7 +600,7 @@ layer {
   name: "fc7_3"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 1024
     kernel_size: 1
@@ -630,7 +630,7 @@ layer {
   name: "fc8-SEC_3"
   type: "Convolution"
   param { lr_mult: 10 decay_mult: 1 }
-  param { lr_mult: 20 decay_mult: 0 }  
+  param { lr_mult: 20 decay_mult: 0 }
   convolution_param {
     num_output: 21
     kernel_size: 1
@@ -652,7 +652,7 @@ layer {
   name: "fc6_4"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 1024
     pad: 24
@@ -684,7 +684,7 @@ layer {
   name: "fc7_4"
   type: "Convolution"
   param { lr_mult: 1 decay_mult: 1 }
-  param { lr_mult: 2 decay_mult: 0 }  
+  param { lr_mult: 2 decay_mult: 0 }
   convolution_param {
     num_output: 1024
     kernel_size: 1
@@ -714,7 +714,7 @@ layer {
   name: "fc8-SEC_4"
   type: "Convolution"
   param { lr_mult: 10 decay_mult: 1 }
-  param { lr_mult: 20 decay_mult: 0 }  
+  param { lr_mult: 20 decay_mult: 0 }
   convolution_param {
     num_output: 21
     kernel_size: 1
@@ -795,7 +795,7 @@ layer {
     module: "pylayers"
     layer: "BalancedSeedLossLayer"
   }
-  loss_weight: 1  
+  loss_weight: 1
 }
 
 layer {
@@ -808,7 +808,7 @@ layer {
     module: "pylayers"
     layer: "ConstrainLossLayer"
   }
-  loss_weight: 1 
+  loss_weight: 1
 }
 
 ####### extra supervision ######
@@ -834,7 +834,7 @@ layer {
 #     module: "pylayers"
 #     layer: "SeedLossLayer3"
 #   }
-#   loss_weight: 1  
+#   loss_weight: 1
 # }
 
 # layer {
@@ -859,7 +859,7 @@ layer {
 #     module: "pylayers"
 #     layer: "SeedLossLayer3"
 #   }
-#   loss_weight: 1  
+#   loss_weight: 1
 # }
 
 # layer {
@@ -884,7 +884,7 @@ layer {
 #     module: "pylayers"
 #     layer: "SeedLossLayer3"
 #   }
-#   loss_weight: 1  
+#   loss_weight: 1
 # }
 
 # layer {
@@ -909,5 +909,5 @@ layer {
 #     module: "pylayers"
 #     layer: "SeedLossLayer3"
 #   }
-#   loss_weight: 1  
+#   loss_weight: 1
 # }

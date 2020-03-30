@@ -13,7 +13,7 @@ import os.path as osp
 import multiprocessing
 from numpy.random import shuffle
 
-from krahenbuhl2013 import CRF
+from krahenbuhl2013.CRF import CRF
 import CC_labeling_8
 from sklearn.cluster import KMeans
 
